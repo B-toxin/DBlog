@@ -96,3 +96,9 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+.custom-link {
+        color: inherit; /* Inherit color from parent element */
+         /* Add underline to mimic link style */
+        cursor: pointer; /* Change cursor to indicate interactivity */
+    }
