@@ -5,6 +5,7 @@ from FlaskBlog.models import User, Post
 from FlaskBlog.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
                                    RequestResetForm, ResetPasswordForm)
 from FlaskBlog.users.utils import save_picture, send_reset_email
+from werkzeug.urls import url_parse
 
 users = Blueprint('users', __name__)
 
@@ -49,17 +50,20 @@ def Login(post_id):
         return redirect(url_for('posts.post', post_id=post_id))
 
     form = LoginForm()
-    flash('You must login first', 'info')
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
-            next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('main.home'))
-        else:
-            flash('Login Unsuccessful. Please check email and password', 'danger')
-            return redirect(url_for('users.login'))  # Redirect to login page on failed login
 
+            next_page = request.args.get('next')
+            if not next_page or url_parse(next_page).netloc != '':
+                next_page = url_for('main.home')
+
+            return redirect(next_page)  # Redirect to intended page after successful login
+
+        flash('Login Unsuccessful. Please check email and password', 'danger')
+
+    flash('You must log in first', 'info')
     return render_template('login.html', title='Login', form=form)
 
 
