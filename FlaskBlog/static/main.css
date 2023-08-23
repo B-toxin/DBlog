@@ -102,3 +102,7 @@ a.article-title:hover {
          /* Add underline to mimic link style */
         cursor: pointer; /* Change cursor to indicate interactivity */
     }
+
+.btn-white-bg {
+        background-color: white;
+    }
