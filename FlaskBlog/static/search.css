@@ -1,14 +1,14 @@
 .search {
     display: inline-flex;
     align-items: center;
-    background-color: #000; /* Background color changed to black */
+    background-color: #111111; /* Background color changed to black */
     color: #000; /* Text color changed to black */
     padding: 7px;
     border-radius: 4px;
     height: 40px;
     margin-top: 15px;
-    margin-left: 100px;
-    border: 1px solid #000; /* Border color changed to black */
+    margin-left: 70px;
+    border: 1px solid #111111; /* Border color changed to black */
 }
 
 .search :is(input, button) {
