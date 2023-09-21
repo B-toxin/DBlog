@@ -2,7 +2,7 @@
     display: inline-flex;
     align-items: center;
     background-color: #111111; /* Background color changed to black */
-    color: #000; /* Text color changed to black */
+    color: #111111; /* Text color changed to black */
     padding: 7px;
     border-radius: 4px;
     height: 40px;
