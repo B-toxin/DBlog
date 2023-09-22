@@ -7,7 +7,7 @@
     border-radius: 4px;
     height: 40px;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 0px;
     border: 1px solid #111111; /* Border color changed to black */
 }
 
@@ -26,7 +26,7 @@
 .searchbutton {
     display: grid;
     place-items: center;
-    width: 30px;
+    width: 25px;
     height: 5px;
     cursor: pointer;
     transition: color 0.25s;
@@ -38,7 +38,7 @@
 }
 
 .search:focus-within input{
-    width: 130px;
+    width: 110px;
 }
 
 ::placeholder {
