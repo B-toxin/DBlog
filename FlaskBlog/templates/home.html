@@ -1,37 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
-    {% for post in posts.items %}
-        <article class="media content-section">
-          <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
-          <div class="media-body">
-            <div class="article-metadata">
-              {% if current_user.is_authenticated %}
-                <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
-              {% else %}
-                <a href="{{ url_for('users.Login', post_id=post.id) }}" class="mr-2">{{ post.author.username }}</a>
-              {% endif %}
-                <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
-            </div>
-            <h2><a class="article-title" >{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content[:100] }}...</p>
-
-            {% if current_user.is_authenticated %}
-              <a href="{{ url_for('posts.post', post_id=post.id) }}" class="btn btn-sm btn-outline-info">Read More</a>
-            {% else %}
-              <a href="{{ url_for('users.Login', post_id=post.id) }}" class="btn btn-sm btn-outline-info">Read More</a>
-            {% endif %}
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    </head>
+    <body>
+    <!-- partial:index.partial.html -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for post in posts.items %}
+        <div class="slider-item swiper-slide">
+          <div class="slider-image-wrapper">
+            <img class="slider-image" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}" alt="SliderImg">
           </div>
-        </article>
-    {% endfor %}
-    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-      {% if page_num %}
-        {% if posts.page == page_num %}
-          <a class="btn btn-info mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
-        {% else %}
-          <a class="btn btn-outline-info mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
-        {% endif %}
-      {% else %}
-        ...
-      {% endif %}
-    {% endfor %}
+          <div class="slider-item-content">
+            <a class="mr-2 mb-4 bold-link" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.content }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js'></script><script  src="{{ url_for('static', filename='script.js') }}"></script>
+
+    </body>
 {% endblock content %}
