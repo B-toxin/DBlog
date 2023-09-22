@@ -13,7 +13,7 @@ var swiper = new Swiper('.swiper-container', {
     dynamicBullets: true
   },
   autoplay: {
-    delay: 3000, // Time in milliseconds between slides
+    delay: 4000, // Time in milliseconds between slides
     disableOnInteraction: false, // Prevent autoplay from stopping when user interacts with the slider
   }
 });

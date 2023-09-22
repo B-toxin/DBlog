@@ -22,7 +22,7 @@ h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  color: #26384E;
+  color:  #004B91;
   transform: translateY(20px);
   transition: all 0.4s ease;
   transition-delay: 0.2s;
@@ -210,4 +210,32 @@ p {
 
 .bold-link {
   font-weight: bold;
+}
+.topstories h1 {
+  color: #fff; /* Set text color to white */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a subtle white text shadow */
+  margin-bottom: 35px;
+  margin-top: -20px;
+}
+.otherstories h1 {
+  color: #fff; /* Set text color to white */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a subtle white text shadow */
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+.swiper-slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider-item-content {
+background-color: transparent; /* Make the background completely transparent */
+padding: 20px; /* Adjust the padding as needed */
+position: bottom; /* Add this to make it relative positioning */
+}
+
+.slider-item-content a {
+margin-bottom: 0.5rem; /* Adjust this value to control the spacing */
+margin-top: 200px;
+font-color: #fff;
 }

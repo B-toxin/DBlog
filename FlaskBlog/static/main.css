@@ -4,18 +4,12 @@ body {
   margin-top: 5rem;
 }
 
-/* Add dark mode styles */
-body.dark-mode {
-  background-color: #1f1f1f;
-  color: #ffffff;
-}
-
 /* Adjust post block background color */
 .content-section {
-  background: #f2f2f2; /* Change this color as needed */
-  padding: 10px 20px;
+  background: #fff; /* Change this color as needed */
+  padding: 2px 15px;
   border: 1px solid #dddddd;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -39,10 +33,13 @@ h1, h2, h3, h4, h5, h6 {
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
   margin-top: 0px;
+  font-family: Arial, sans-serif; /* Change the font family to Arial or your preferred font */
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -114,17 +111,43 @@ a.article-title:hover {
     font-size: 0.6rem;
 }
 /* Style for the small buttons */
-.login-button,
-.register-button {
+.login-button{
   font-family: Arial, sans-serif; /* Change the font family to Arial or your preferred font */
   font-weight: bold;
   font-size: 12px;
-  border-radius: 8px; /* Curved edges */
+  border-radius: 5px; /* Curved edges */
   padding: 1px 2px; /* Padding for the buttons */
-  margin-right: 0px; /* Margin between the buttons */
-  background-color: #ff0000; /* Transparent background */
+  margin-left: 100px;
+  background-color: #990000;
   color: #fff;
   border: 1px solid #ff0000; /* Red border */
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Hover effect */
+}
+.btn-outline-info{
+    margin-top: 10px;
+}
+/* Style for the smaller article blocks */
+.smaller-article {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 600px; /* Set a maximum width for responsiveness */
+  margin-top: 10px; /* Center the article blocks horizontally */
+  padding: 10px; /* Adjust the padding as needed */
+  border: 1px solid #ccc; /* Add a border for separation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #fff; /* Background color for the blocks */
+  margin-bottom: 20px; /* Space between blocks */
+  max-height: 150px; /* Adjust the maximum height as needed */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Style for the smaller article titles */
+.smaller-article h2 {
+  font-size: 18px; /* Adjust the title font size */
+  font-weight: bold; /* Make the title bold */
+}
+
+/* Style for the smaller article content */
+.smaller-article p {
+  font-size: 14px; /* Adjust the content font size */
+  margin-top: -10px; /* Space between title and content */
 }
