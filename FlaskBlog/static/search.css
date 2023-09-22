@@ -1,12 +1,11 @@
 .search {
     display: inline-flex;
-    align-items: center;
     background-color: #111111; /* Background color changed to black */
     color: #111111; /* Text color changed to black */
     padding: 7px;
     border-radius: 4px;
     height: 40px;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left: 0px;
     border: 1px solid #111111; /* Border color changed to black */
 }
@@ -19,6 +18,7 @@
 }
 
 .searchinput {
+    font-size: 11px;
     width: 0;
     transition: width 0.5s;
 }
@@ -44,4 +44,8 @@
 ::placeholder {
     font: inherit;
     color: #fff; /* Placeholder color changed to black */
+}
+.searchbutton i {
+  font-size: 11px; /* Adjust the font size to make the icon smaller */
+  margin-top: 6px;
 }

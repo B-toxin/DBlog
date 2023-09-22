@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .site-header .navbar-nav .nav-link:hover {
@@ -109,5 +109,22 @@ a.article-title:hover {
         background-color: white;
     }
 .navbar-toggler {
-    margin-top: 10px;
+    margin-top: 0px;
+    padding: 3px 6px; /* Adjust padding for the button */
+    font-size: 0.6rem;
+}
+/* Style for the small buttons */
+.login-button,
+.register-button {
+  font-family: Arial, sans-serif; /* Change the font family to Arial or your preferred font */
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 8px; /* Curved edges */
+  padding: 1px 2px; /* Padding for the buttons */
+  margin-right: 0px; /* Margin between the buttons */
+  background-color: #ff0000; /* Transparent background */
+  color: #fff;
+  border: 1px solid #ff0000; /* Red border */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hover effect */
 }
