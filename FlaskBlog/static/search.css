@@ -7,7 +7,7 @@
     border-radius: 4px;
     height: 40px;
     margin-top: 15px;
-    margin-left: 70px;
+    margin-left: 40px;
     border: 1px solid #111111; /* Border color changed to black */
 }
 
@@ -38,7 +38,7 @@
 }
 
 .search:focus-within input{
-    width: 200px;
+    width: 150px;
 }
 
 ::placeholder {
