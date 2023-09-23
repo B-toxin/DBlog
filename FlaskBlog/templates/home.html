@@ -8,51 +8,55 @@
     <div class="topstories">
         <h1>Top Stories</h1>
     </div>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        {% for post in posts.items %}
-            <div class="slider-item swiper-slide" style="background-image: url('{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}');">
-              <div class="slider-item-content">
-                <a class="mr-2 mb-4 bold-link" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
-                <h1>{{ post.title }}</h1>
-                <p>{{ post.content }}</p>
-              </div>
+    <div class="container-fluid custom-container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12">
+                <div class="swiper-container custom-swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for post in posts.items %}
+                            <div class="slider-item swiper-slide" style="background-image: url('{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}');">
+                                <div class="slider-item-content">
+                                    <a class="mr-2 mb-4 bold-link" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+                                    <h1>{{ post.title }}</h1>
+                                    <p>{{ post.content }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-        {% endfor %}
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-
-    <div class="otherstories">
-      <h1>Other Stories</h1>
-    </div>
-
-    {% for post in posts.items %}
-        <article class="media content-section smaller-article">
-          <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
-          <div class="media-body">
-            <div class="article-metadata">
-              {% if current_user.is_authenticated %}
-                <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
-              {% else %}
-                <a href="{{ url_for('users.Login', post_id=post.id) }}" class="mr-2">{{ post.author.username }}</a>
-              {% endif %}
-              <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="otherstories">
+                    <h1>Other Stories</h1>
+                </div>
+                {% for post in posts.items %}
+                    <article class="media content-section bigger-article">
+                        <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+                        <div class="media-body">
+                            <div class="article-metadata">
+                                {% if current_user.is_authenticated %}
+                                    <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+                                {% else %}
+                                    <a href="{{ url_for('users.Login', post_id=post.id) }}" class="mr-2">{{ post.author.username }}</a>
+                                {% endif %}
+                                <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                            </div>
+                            <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h2>
+                            <p class="article-content">{{ post.content[:50] }}...</p>
+                            {% if current_user.is_authenticated %}
+                                <a href="{{ url_for('posts.post', post_id=post.id) }}" class="btn btn-sm btn-outline-info">Read More</a>
+                            {% else %}
+                                <a href="{{ url_for('users.Login', post_id=post.id) }}" class="btn btn-sm btn-outline-info">Read More</a>
+                            {% endif %}
+                        </div>
+                    </article>
+                {% endfor %}
             </div>
-            <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content[:30] }}...</p>
-
-            {% if current_user.is_authenticated %}
-              <a href="{{ url_for('posts.post', post_id=post.id) }}" class="btn btn-sm btn-outline-info">Read More</a>
-            {% else %}
-              <a href="{{ url_for('users.Login', post_id=post.id) }}" class="btn btn-sm btn-outline-info">Read More</a>
-            {% endif %}
-          </div>
-        </article>
-    {% endfor %}
-
+        </div>
+    </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js'></script><script  src="{{ url_for('static', filename='script.js') }}"></script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js'></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 {% endblock content %}
