@@ -6,6 +6,8 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin-top: 45px;
+  margin-left: -50px;
+  margin-right: 60px;
   width: 100%;
   height: 100vh;
   background-color: #111111;
@@ -76,6 +78,27 @@ p {
   height: 100%;
   max-height: 420px;
   border-radius: 10px;
+}
+
+/* Custom CSS to adjust the major container and .swiper-container */
+@media (max-width: 768px) {
+  .custom-container {
+    /* Increase the width of the major container */
+    width: 130%;
+  }
+
+  .swiper-container {
+    background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 105%; /* Set the .swiper-container width to 100% */
+    position: relative;
+    max-width: 420px;
+    height: 100%;
+    max-height: 420px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .slider-image-wrapper {
@@ -215,13 +238,24 @@ p {
   color: #fff; /* Set text color to white */
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a subtle white text shadow */
   margin-bottom: 35px;
+  margin-left: 20px;
   margin-top: -20px;
 }
 .otherstories h1 {
   color: #fff; /* Set text color to white */
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a subtle white text shadow */
   margin-bottom: 35px;
-  margin-top: 20px;
+  margin-top: -60px;
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .otherstories h1 {
+    color: #fff; /* Set text color to white */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a subtle white text shadow */
+    margin-bottom: 35px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
 }
 .swiper-slide {
     background-size: cover;
