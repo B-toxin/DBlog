@@ -59,13 +59,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   border: 1px solid #ff0000; /* Red border */
   cursor: pointer;
-  /* Remove the blue hover effect and set text color to white */
   transition: background-color 0.3s ease; /* Remove transition effect */
 }
 
 .login-button:hover {
   background-color: #990000; /* Keep the same background color on hover */
   color: #fff;
+}
+
+.border-bottom{
+    color: #fff;
 }
 
 .bottom-nav {
@@ -140,4 +143,3 @@ h1, h2, h3, h4, h5, h6 {
 .fa-bars:hover {
   color: red !important; /* Change color on hover */
 }
-
