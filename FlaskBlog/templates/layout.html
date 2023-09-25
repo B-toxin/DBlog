@@ -20,22 +20,26 @@
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-            <div class="container">
-                {% if current_user.is_authenticated %}
-                    <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}">
-                {% else %}
-                    <img class="rounded-circle article-img" src="{{ url_for('static', filename='images/default.jpg') }}">
-                {% endif %}
-                <a class="navbar-brand mx-auto" href="/"> <!-- Add mx-auto class -->
-                  <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DBlog Logo" style="width: 50px; height: 25px; margin-top: -10px;">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div>
+                    {% if current_user.is_authenticated %}
+                        <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}">
+                    {% else %}
+                        <img class="rounded-circle article-img" src="{{ url_for('static', filename='images/default.jpg') }}">
+                    {% endif %}
+                </div>
+                <a class="navbar-brand mx-auto center-logo" href="/"> <!-- Updated class to mx-auto and added text-center -->
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DBlog Logo" style="width: 50px; height: 25px; margin-top: -10px;">
                 </a>
                 {% if current_user.is_authenticated %}
+                    <!-- You can add other navigation items here for authenticated users -->
                 {% else %}
                     <a class="nav-item1 nav-link login-button" href="{{ url_for('users.login') }}" style="color: white; height: 20px; width: 55px; line-height: 17px;">Sign In</a>
                 {% endif %}
             </div>
         </nav>
     </header>
+
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
@@ -60,11 +64,11 @@
         <a href="#" class="nav-item">
             <i class="fas fa-search"></i>
         </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-envelope"></i>
+        <a href="{{ url_for('posts.new_post') }}" class="nav-item">
+            <i class="fas fa-plus"></i>
         </a>
         <a href="#" class="nav-item">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-envelope"></i>
         </a>
         <a href="#" class="nav-item" id="navToggle">
             <i class="fas fa-bars"></i>
