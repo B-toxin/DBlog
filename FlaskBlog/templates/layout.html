@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/sidebar.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Dblog.jpg') }}">
 
     {% if title %}
@@ -28,7 +29,10 @@
                 <a class="navbar-brand mx-auto" href="/"> <!-- Add mx-auto class -->
                   <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DBlog Logo" style="width: 50px; height: 25px; margin-top: -10px;">
                 </a>
-                <a class="nav-item1 nav-link login-button" href="{{ url_for('users.login') }}" style="color: white; height: 20px; width: 55px; line-height: 17px;">Sign In</a>
+                {% if current_user.is_authenticated %}
+                {% else %}
+                    <a class="nav-item1 nav-link login-button" href="{{ url_for('users.login') }}" style="color: white; height: 20px; width: 55px; line-height: 17px;">Sign In</a>
+                {% endif %}
             </div>
         </nav>
     </header>
@@ -48,6 +52,7 @@
         </div>
       </div>
     </main>
+
     <div class="bottom-nav">
         <a href="/" class="nav-item active">
             <i class="fas fa-home"></i>
@@ -61,10 +66,15 @@
         <a href="#" class="nav-item">
             <i class="fas fa-user"></i>
         </a>
-        <a href="#" class="nav-item">
+        <a href="#" class="nav-item" id="navToggle">
             <i class="fas fa-bars"></i>
         </a>
     </div>
+
+    <div class="sidebar" id="sidebar">
+        <p> Sidebar </p>
+    </div>
+
     <script>
       var lastScrollTop = 0;
       var navbar = document.querySelector(".bottom-nav");
@@ -84,7 +94,7 @@
       });
     </script>
 
-    <script src="{{ url_for('static', filename='Javascript/icons.js') }}"></script>
+    <script src="{{ url_for('static', filename='Javascript/sidebar.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
