@@ -17,7 +17,7 @@
                         <div class="media-body">
                             <div class="article-metadata">
                                 <a class="mr-2 user-name">{{ post.author.username }}</a>
-                                <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                                <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}</small>
                             </div>
                             <p class="article-content">{{ post.content[:80] }}...</p>
                         </div>
