@@ -1,0 +1,83 @@
+body {
+  background: #111111;
+  color: #333333;
+  margin-top: 5rem;
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+/* Default styles for larger screens */
+.content-section {
+  background: #111; /* Black background */
+  padding: 10px;
+  margin-left: -20px; /* To align with the parent container */
+  margin-right: -20px; /* To align with the parent container */
+  width: calc(100% + 40px); /* Calculate the width to cover the entire screen */
+  height: 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Faint white top border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Faint white bottom border */
+}
+
+/* Ensure post content remains black in dark mode */
+.content-section,
+.article-title,
+.article-content {
+  color: #000000; /* Set text color to black */
+}
+
+/* Continue with your existing styles */
+h1, h2, h3, h4, h5, h6 {
+  color: white !important;
+}
+
+.article-content {
+  white-space: pre-line;
+  color: #fff;
+  margin-right: -15px;
+  margin-left: 10px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.article-img {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  margin-right: -15px;
+  margin-left: 10px;
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.user-name{
+    color: white !important;
+    font-size: 13.5px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+.topstories{
+    margin-top: -13px;
+}

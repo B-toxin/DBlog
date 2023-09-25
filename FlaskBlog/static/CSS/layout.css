@@ -1,0 +1,137 @@
+body {
+  background: #111111;
+  margin-top: 5rem;
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+/* Continue with your existing styles */
+h1, h2, h3, h4, h5, h6 {
+  color: white !important;
+}
+
+.bg-steel {
+  background-color: #111111;
+}
+
+.site-header .navbar-nav .nav-link1 {
+  color: #fff;
+  margin-top: 0px;
+  font-family: Arial, sans-serif; /* Change the font family to Arial or your preferred font */
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.site-header .navbar-nav .nav-link1.active {
+  font-weight: 500;
+}
+
+.site-header .navbar-nav .nav-link1:hover {
+  color: #fff; /* Set text color to white on hover */
+}
+
+.navbar-brand{
+    margin-left: 100px;
+    margin-right: -150px;
+}
+.nav-item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.login-button {
+  font-family: Arial, sans-serif; /* Change the font family to Arial or your preferred font */
+  font-weight: bold;
+  font-size: 10.5px;
+  border-radius: 5px; /* Curved edges */
+  padding: 1px 2px; /* Padding for the buttons */
+  margin-left: 20px;
+  background-color: #990000;
+  color: #fff;
+  border: 1px solid #ff0000; /* Red border */
+  cursor: pointer;
+  /* Remove the blue hover effect and set text color to white */
+  transition: background-color 0.3s ease; /* Remove transition effect */
+}
+
+.login-button:hover {
+  background-color: #990000; /* Keep the same background color on hover */
+  color: #fff;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111111; /* Adjust this background color as needed */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px; /* Adjust the height as needed */
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s;
+  transform: translateY(0); /* Initially visible */
+  opacity: 1; /* Initially visible */
+  z-index: 999; /* Ensure it's on top of other content */
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-item i {
+    font-size: 20px;
+    color: white !important;
+}
+
+.bottom-nav.swiped-up {
+    transform: translateY(60px); /* Adjust the value as needed for hiding */
+}
+
+/* Remove underline and override default link styles */
+.nav-item,
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Change color to red on hover */
+.nav-item:hover {
+  color: red !important;
+}
+
+/* Add this CSS to your stylesheet */
+/* Add this CSS to your stylesheet */
+.fa-envelope,
+.fa-search,
+.fa-home,
+.fa-user,
+.fa-bars {
+  text-decoration: none !important; /* Remove underline */
+  color: inherit !important; /* Inherit color from parent element */
+}
+
+.fa-envelope:hover,
+.fa-search:hover,
+.fa-home:hover,
+.fa-user:hover,
+.fa-bars:hover {
+  color: red !important; /* Change color on hover */
+}
+
