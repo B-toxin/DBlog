@@ -1,0 +1,55 @@
+/* Styles for larger screens (show sidebar) */
+@media screen and (min-width: 768px) {
+    .sidebar {
+        width: 33.33%;
+        float: left;
+        background-color: #111111; /* Set your desired background color */
+        display: block; /* Show the sidebar */
+    }
+
+    .main-content {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 66.67%;
+        float: right;
+    }
+
+    .bottom-nav {
+        display: none; /* Hide the bottom navigation */
+    }
+}
+
+/* Styles for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 767px) {
+    /* Sidebar styles */
+    .sidebar {
+        position: fixed;
+        left: -100%; /* Start offscreen on the left */
+        top: 0;
+        height: 100vh; /* Full height of the viewport */
+        width: 80%; /* 80% of the page width */
+        background-color: #111;
+        border-right: 1px solid rgba(255, 255, 255, 0.1); /* Faint white border */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        transition: left 0.3s ease; /* Use left property for animation */
+        z-index: 1; /* Ensure sidebar appears above main content */
+    }
+
+    /* Main content styles */
+    .main-content {
+        position: relative; /* Add relative positioning */
+        z-index: 0; /* Default z-index */
+        transition: margin-left 0.3s ease; /* Use margin-left for main content */
+        padding: 20px;
+        margin-left: 0; /* Ensure main content is not covered */
+    }
+
+    /* Show sidebar when active class is added */
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content.active {
+        margin-left: 0; /* Main content remains in place */
+        z-index: -1; /* Move it behind the sidebar */
+    }
+}
