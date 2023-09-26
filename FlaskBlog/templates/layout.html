@@ -19,7 +19,9 @@
     {% endif %}
 </head>
 <body>
-    <div class="loader"></div>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container d-flex align-items-center justify-content-between">
@@ -83,7 +85,7 @@
     <script>
         // JavaScript to hide the loader when the page is fully loaded
         window.addEventListener("load", function () {
-            document.querySelector(".loader").style.display = "none";
+            document.querySelector(".loader-container").style.display = "none";
         });
     </script>
     <script>
