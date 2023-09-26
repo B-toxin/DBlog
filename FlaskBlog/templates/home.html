@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
     <head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
       <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
     </head>
     <body>
@@ -27,7 +26,6 @@
         </div>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js'></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 {% endblock content %}
