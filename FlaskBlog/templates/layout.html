@@ -93,11 +93,22 @@
         document.querySelector(".loader-container").style.display = "none";
     }
 
-    // Attach an event listener to the DOMContentLoaded event to show the loader
-    document.addEventListener("DOMContentLoaded", showLoader);
+    // Attach an event listener to the Fetch API to show the loader when a request is initiated
+    document.addEventListener("fetch-start", showLoader);
 
-    // Attach an event listener to the load event to hide the loader when the page is fully loaded
-    window.addEventListener("load", hideLoader);
+    // Attach an event listener to the Fetch API to hide the loader when the request is complete
+    document.addEventListener("fetch-end", hideLoader);
+
+    // Example: Send a Fetch request to the server
+    fetch("your-server-endpoint")
+        .then(response => {
+            // Trigger the fetch-end event when the request is complete
+            document.dispatchEvent(new Event("fetch-end"));
+            return response.json();
+        })
+        .then(data => {
+            // Handle the response data here
+        });
 </script>
     <script>
       var lastScrollTop = 0;
