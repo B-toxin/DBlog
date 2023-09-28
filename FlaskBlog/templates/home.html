@@ -3,29 +3,27 @@
     <head>
       <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
     </head>
-    <body>
+    <body class="home">
     <div class="topstories">
         <h4>Top Stories</h4>
     </div>
-    <div class="container-fluid custom-container">
+    <div class="">
         <div class="row">
-            <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="container-fluid">
                 {% for post in posts.items %}
-                    <article class="media content-section bigger-article">
+                    <article class="container-fluid media content-section bigger-article">
                         <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
                         <div class="media-body">
                             <div class="article-metadata">
                                 <a class="mr-2 user-name">{{ post.author.username }}</a>
                                 <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}</small>
                             </div>
-                            <p class="article-content">{{ post.content[:80] }}...</p>
+                            <p class="article-content">{{ post.content[:150] }}...</p>
                         </div>
                     </article>
                 {% endfor %}
             </div>
         </div>
     </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 {% endblock content %}

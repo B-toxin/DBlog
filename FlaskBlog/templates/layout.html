@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/layout.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/loader.css') }}">
@@ -18,7 +18,7 @@
         <title>ChatBurst</title>
     {% endif %}
 </head>
-<body>
+<body class="">
     <div class="loader-container">
         <div class="loader"></div>
     </div>
@@ -48,13 +48,13 @@
     <div class="clearfix">
         <div class="sidebar">
             <div class="sidebar-content">
-                <p> Sidebar </p>
+                <p> Sidebar must always show on mobile devices</p>
             </div>
         </div>
         <div class="main-content">
-            <main role="main" class="container">
+            <main role="main" class="">
               <div class="row">
-                <div class="col-md-8">
+                <div class="">
                   {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
                       {% for category, message in messages %}
