@@ -1,39 +1,37 @@
-body {
-  background: #111111;
-  color: #333333;
-  margin-top: 5rem; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+/* Reset default margin and padding on all elements */
+
+/* Style for the .home section */
+.home {
+    background: #111111;
+    color: #ffffff; /* Set text color to white */
+    margin-top: 3rem; /* Adjust as needed */
+    width: 100%;
+    padding: 0;
 }
 
+/* Style for individual articles (post contents) */
 .bigger-article {
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
-.container-fluid{
-    margin-right: -40px;
-    margin-left: -20px;
-}
-
-/* Default styles for larger screens */
 .content-section {
-  background: #111; /* Black background */
-  padding: 10px;
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Faint white top border */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Faint white bottom border */
+    background: #111; /* Black background for individual articles (post contents) */
+    padding: 10px;
+    width: 100%; /* Reset the width to 100% for individual articles */
+    /* Other styles for the content go here */
 }
 
 /* Ensure post content remains black in dark mode */
 .content-section,
 .article-title,
 .article-content {
-  color: #000000; /* Set text color to black */
+    color: #000000; /* Set text color to black */
 }
 
 /* Continue with your existing styles */
 h1, h2, h3, h4, h5, h6 {
-  color: white !important;
+    color: white !important;
 }
 
 .article-content {
@@ -46,15 +44,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article-img {
-  height: 40px;
-  width: 40px;
-  margin-left: -20px; /* Remove left margin */
+  height: 45px;
+  width: 45px;
+  margin-left: 20px; /* Remove left margin */
 }
 
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  margin-right: 0; /* Remove right margin */
+  margin-right: 20px; /* Remove right margin */
   margin-left: 10px; /* Remove left margin */
 }
 
@@ -86,5 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .topstories {
-  margin-top: -13px;
+  margin-top: -10px;
+  margin-left: 20px;
+  border: none;
 }

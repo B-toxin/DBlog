@@ -1,11 +1,16 @@
 body {
   background: #111111;
   margin-top: 5rem;
-  margin-left: 0px;
-  margin-right: 0px;
   padding: 0;
+  width: 100%
 }
 
+.container-fluid{
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Faint white top border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Faint white bottom border */
+}
 
 /* Continue with your existing styles */
 h1, h2, h3, h4, h5, h6 {
@@ -86,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   height: 60px; /* Adjust the height as needed */
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  transition: transform 0.3s; /* Added transition for smooth animation */
+  transition: transform 0.5s; /* Added transition for smooth animation */
   transform: translateY(0); /* Initially visible */
   opacity: 1; /* Initially visible */
   z-index: 999; /* Ensure it's on top of other content */

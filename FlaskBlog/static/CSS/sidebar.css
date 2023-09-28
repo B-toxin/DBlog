@@ -4,11 +4,10 @@
         width: 33.33%;
         float: left;
         background-color: #111111; /* Set your desired background color */
-        display: block; /* Show the sidebar */
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .main-content {
-        border: 1px solid rgba(255, 255, 255, 0.3);
         width: 66.67%;
         float: right;
     }
@@ -46,6 +45,11 @@
     /* Show sidebar when active class is added */
     .sidebar.active {
         left: 0;
+    }
+
+    /* Show sidebar content when sidebar is active */
+    .sidebar.active .sidebar-content {
+        display: block; /* Show the sidebar content */
     }
 
     .main-content.active {
