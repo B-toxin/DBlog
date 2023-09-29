@@ -5,7 +5,7 @@
     background: #111111;
     color: #ffffff; /* Set text color to white */
     margin-top: 3rem; /* Adjust as needed */
-    width: 100%;
+    width: 95%;
     padding: 0;
 }
 
@@ -19,6 +19,8 @@
     background: #111; /* Black background for individual articles (post contents) */
     padding: 10px;
     width: 100%; /* Reset the width to 100% for individual articles */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Faint white top border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Faint white bottom border */
     /* Other styles for the content go here */
 }
 
@@ -84,7 +86,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .topstories {
-  margin-top: -10px;
+  margin-top: -60px;
   margin-left: 20px;
   border: none;
+}
+
+.float{
+	position:fixed;
+	width:70px;
+	height:70px;
+	bottom: 120px;
+	right:40px;
+	background-color:#990000;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	z-index: 9999;
+}
+
+.my-float{
+	margin-top: 27px;
 }

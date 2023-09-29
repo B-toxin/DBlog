@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
 body {
   background: #111111;
   margin-top: 5rem;
@@ -6,7 +8,7 @@ body {
 }
 
 .container-fluid{
-    width: 100%;
+    width: 95%;
     padding: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Faint white top border */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Faint white bottom border */

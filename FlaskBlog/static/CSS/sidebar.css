@@ -2,14 +2,55 @@
 @media screen and (min-width: 768px) {
     .sidebar {
         width: 33.33%;
+        height: 100%;
         float: left;
+        font-color: #fff;
         background-color: #111111; /* Set your desired background color */
-        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .profile{
+        margin-left: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar-content {
+      margin-top: 10px;
+    }
+
+    .side {
+      display: flex;
+      align-items: center; /* Vertically center the icon and text */
+      margin-left: 40px;
+      margin-bottom: 15px;
+      padding: 10px;
+      text-decoration: none; /* Remove text decoration */
+      color: #fff;
+    }
+
+    .side i {
+      font-size: 22px;
+      color: white !important;
+      margin-right: 10px; /* Add some spacing between icon and text */
+    }
+
+    .side span {
+      color: white; /* Set the text color to white */
+      margin-left: 10px;
+      font-size: 22px;
+    }
+
+    .side:hover {
+      text-decoration: none; /* Remove text decoration on hover */
     }
 
     .main-content {
+        margin-top: 30px;
         width: 66.67%;
         float: right;
+    }
+
+    .sidebar.active {
+        display: block; /* Show the sidebar on larger screens */
     }
 
     .bottom-nav {
@@ -19,7 +60,6 @@
 
 /* Styles for smaller screens (e.g., mobile devices) */
 @media screen and (max-width: 767px) {
-    /* Sidebar styles */
     .sidebar {
         position: fixed;
         left: -100%; /* Start offscreen on the left */
@@ -33,7 +73,49 @@
         z-index: 1; /* Ensure sidebar appears above main content */
     }
 
-    /* Main content styles */
+    .profile{
+        margin-left: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar-content {
+      margin-top: 40px;
+    }
+
+    .side {
+      display: flex;
+      align-items: center; /* Vertically center the icon and text */
+      margin-left: 40px;
+      margin-bottom: 15px;
+      padding: 10px;
+      text-decoration: none; /* Remove text decoration */
+      color: #fff;
+    }
+
+    .side i {
+      font-size: 22px;
+      color: white !important;
+      margin-right: 10px; /* Add some spacing between icon and text */
+    }
+
+    .side span {
+      color: white; /* Set the text color to white */
+      margin-left: 10px;
+      font-size: 22px;
+    }
+
+    .side:hover {
+      text-decoration: none; /* Remove text decoration on hover */
+    }
+
+    .site-header {
+        position: relative; /* Add relative positioning */
+        z-index: 0; /* Default z-index */
+        transition: margin-left 0.3s ease; /* Use margin-left for main content */
+        padding: 20px;
+        margin-left: 0; /* Ensure main content is not covered */
+    }
+
     .main-content {
         position: relative; /* Add relative positioning */
         z-index: 0; /* Default z-index */
@@ -45,11 +127,6 @@
     /* Show sidebar when active class is added */
     .sidebar.active {
         left: 0;
-    }
-
-    /* Show sidebar content when sidebar is active */
-    .sidebar.active .sidebar-content {
-        display: block; /* Show the sidebar content */
     }
 
     .main-content.active {
