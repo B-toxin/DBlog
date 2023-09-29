@@ -1,0 +1,25 @@
+.login{
+    margin-left: 60px;
+}
+.below{
+    margin-left: 60px;
+}
+
+.form-group{
+    color: #fff;
+}
+
+.custom-button-class {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #990000; /* Red border */
+    color: #990000; /* Red text color */
+    /* Additional styles as needed */
+    padding: 10px 20px; /* Adjust padding for the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.custom-button-class:hover {
+    background-color: #990000; /* Red background on hover */
+    color: white; /* White text color on hover */
+}
