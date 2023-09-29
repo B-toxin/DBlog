@@ -1,17 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
     </head>
     <body class="home">
     <div class="topstories">
         <h4>Top Stories</h4>
     </div>
-    <div class="">
+    <a href="#" class="float">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+    <div class="container-fluid">
         <div class="row">
-            <div class="container-fluid">
+            <div class="">
                 {% for post in posts.items %}
-                    <article class="container-fluid media content-section bigger-article">
+                    <article class="media content-section bigger-article">
                         <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
                         <div class="media-body">
                             <div class="article-metadata">

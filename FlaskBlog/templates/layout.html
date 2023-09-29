@@ -48,7 +48,35 @@
     <div class="clearfix">
         <div class="sidebar">
             <div class="sidebar-content">
-                <p> Sidebar must always show on mobile devices</p>
+                <div class="profile">
+                    {% if current_user.is_authenticated %}
+                        <h3 class="account-heading">{{ current_user.username }}</h3>
+                        <p class="text-secondary">{{ current_user.email }}</p>
+                    {% else %}
+                        <h3>User</h3>
+                    {% endif %}
+                </div>
+                <a href="#" class="side">
+                  <i class="fas fa-user"></i>
+                  <span>Profile</span>
+                </a>
+                <a href="#" class="side">
+                  <i class="fas fa-plus"></i>
+                  <span>New Post</span>
+                </a>
+                <a href="#" class="side">
+                  <i class="fas fa-envelope"></i>
+                  <span>Messages</span>
+                </a>
+
+                <a href="#" class="side">
+                  <i class="fas fa-bookmark"></i>
+                  <span>Bookmarks</span>
+                </a>
+                <a href="#" class="side">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
             </div>
         </div>
         <div class="main-content">
