@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="content-section">
+    <div class="login">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -60,11 +60,11 @@
                 </div>
             </fieldset>
             <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+                {{ form.submit(class="btn btn-info custom-button-class") }}
             </div>
         </form>
     </div>
-    <div class="border-top pt-3">
+    <div class="below border-top pt-3">
         <small class="text-muted">
             Already Have An Account? <a class="ml-2" href="{{ url_for('users.login') }}">Sign In</a>
         </small>
