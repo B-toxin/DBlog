@@ -16,13 +16,23 @@
             <div class="">
                 {% for post in posts.items %}
                     <article class="media content-section bigger-article">
-                        <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+                        <a href="{{ url_for('users.user_posts', username=post.author.username) }}">
+                            <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+                        </a>
                         <div class="media-body">
                             <div class="article-metadata">
                                 <a class="mr-2 user-name">{{ post.author.username }}</a>
                                 <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}</small>
                             </div>
-                            <p class="article-content">{{ post.content[:150] }}...</p>
+                            <p class="article-content">
+                                <a href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.content[:150] }}...</a>
+                            </p>
+                            <div class="post-icons">
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-eye"></i>
+                                <i class="far fa-bookmark"></i>
+                            </div>
                         </div>
                     </article>
                 {% endfor %}

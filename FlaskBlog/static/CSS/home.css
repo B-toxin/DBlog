@@ -55,6 +55,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
 }
 
+.article-content a {
+    color: white;
+    text-decoration: none;
+}
+
 .article-img {
   height: 45px;
   width: 45px;
@@ -124,4 +129,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .my-float {
     margin-top: 27px;
+}
+
+.post-icons{
+    color: #777777;
+    margin-left: 10px;
+}
+
+.post-icons i {
+    margin-right: 50px; /* Adjust the value to increase or decrease the space between icons */
 }
