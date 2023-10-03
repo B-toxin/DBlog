@@ -137,5 +137,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-icons i {
-    margin-right: 50px; /* Adjust the value to increase or decrease the space between icons */
+    font-size: 14px;
+    margin-right: 35px; /* Adjust the value to increase or decrease the space between icons */
 }
