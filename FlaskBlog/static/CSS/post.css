@@ -1,0 +1,151 @@
+@media screen and (min-width: 768px) {
+    .content-section {
+        background: #111; /* Black background for individual articles (post contents) */
+        padding: 10px;
+        width: 100%; /* Reset the width to 100% for individual articles */
+    }
+    .post{
+        margin-top: -10px;
+        padding: 10px;
+    }
+    .bigger-article1 {
+        position: relative;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-section {
+        background: #111; /* Black background for individual articles (post contents) */
+        padding: 10px;
+        margin-top: -100px;
+        width: 100%; /* Reset the width to 100% for individual articles */
+
+        /* Other styles for the content go here */
+    }
+    .site-header{
+        display: none;
+    }
+    .post{
+        margin-top: -100px;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .bigger-article1 {
+        position: relative;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Ensure post content remains black in dark mode */
+.content-section,
+.article-title,
+.article-content {
+    color: #000000; /* Set text color to black */
+}
+
+/* Continue with your existing styles */
+h1, h2, h3, h4, h5, h6 {
+    color: white !important;
+}
+
+.article-content {
+  white-space: pre-line;
+  color: #fff;
+  margin-right: 0; /* Remove right margin */
+  margin-left: 10px; /* Remove left margin */
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.article-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.article-img {
+  height: 45px;
+  width: 45px;
+  margin-left: 20px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  margin-right: 20px; /* Remove right margin */
+  margin-left: 10px; /* Remove left margin */
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.user-name {
+  color: white !important;
+  font-size: 13.5px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.topstories {
+  margin-top: 0px;
+  margin-left: 20px;
+  border: none;
+}
+
+.my-float, .float i {
+    text-decoration: none !important; /* Remove text decoration forcefully */
+}
+
+.float {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 120px;
+    right: 40px;
+    background-color: #990000;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.float:hover {
+    background-color: #990000;
+}
+
+.my-float {
+    margin-top: 27px;
+}
+
+.post-icons{
+    color: #777777;
+}
+
+.post-icons i {
+    font-size: 14px;
+    margin-right: 40px; /* Adjust the value to increase or decrease the space between icons */
+    text-decoration: none !important;
+}
+.comment{
+    padding: 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

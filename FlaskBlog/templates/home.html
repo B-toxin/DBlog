@@ -2,13 +2,13 @@
 {% block content %}
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/home.css') }}">
     </head>
     <body class="home">
     <div class="topstories">
         <h4>Top Stories</h4>
     </div>
-    <a href="#" class="float">
+    <a href="/post/new" class="float">
         <i class="fa fa-plus my-float"></i>
     </a>
     <div class="container-fluid">
@@ -28,7 +28,10 @@
                                 <a href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.content[:150] }}...</a>
                             </p>
                             <div class="post-icons">
-                                <i class="far fa-comment"></i>
+                                <a href="{{ url_for('posts.comment', post_id=post.id) }}">
+                                    <i class="far fa-comment comment-icon"></i>
+                                    <span class="comment-count">{{ post.comments.all()|length }}</span>
+                                </a>
                                 <i class="far fa-heart"></i>
                                 <i class="far fa-eye"></i>
                                 <i class="far fa-bookmark"></i>

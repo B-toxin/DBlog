@@ -1,6 +1,7 @@
 class Config:
     SECRET_KEY = 'e71121f8359c7c241f56e489f91f32d7'
-    SQLALCHEMY_DATABASE_URI = 'postgresql://dblog_5d0l_user:jEwPqP04nWhUTPh54eiIBNGTVuojUgY5@dpg-cjg8snb37aks73b73np0-a.ohio-postgres.render.com/dblog_5d0l'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///clique.db'  # SQLite database file is named site.db in the current directory
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True

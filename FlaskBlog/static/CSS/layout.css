@@ -154,3 +154,20 @@ h1, h2, h3, h4, h5, h6 {
 .fa-bars:hover {
   color: red !important; /* Change color on hover */
 }
+
+.comment-icon {
+    color: #777777;  /* Set the icon color to white */
+    text-decoration: none;  /* Remove underline (hover effect) */
+}
+
+.comment-icon:hover {
+    color: #777777;  /* Keep the icon color white on hover (optional, but ensures consistency) */
+}
+.comment-count {
+    margin-left: -35px;  /* Adjust the margin according to your design */
+    margin-right: 20px;  /* Adjust the margin according to your design */
+    color: #777777;  /* Set the text color to white */
+    font-weight: bold;  /* Optionally, make the text bold */
+    font-size: 12px;
+    /* Add more styles as needed */
+}
